@@ -328,11 +328,11 @@ nav .nav-left {
     /* background-color: rgba(0, 0, 0, 0.1); */
 }
 
-.parallax-window::after {
+/* .parallax-window::after {
   content: "";
   background-color: rgba(0,0,0,.5);
   z-index: 4;
-}
+} */
 
 .photograph-container,.artwork-container,.page-container {
   z-index: 2;
@@ -525,6 +525,7 @@ nav .nav-left {
   text-align: center;
   font-size: 2rem;
   margin-bottom: 1rem;
+  word-break: break-word;
 }
 
 footer {
