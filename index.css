@@ -200,7 +200,7 @@ nav .nav-left {
     align-items: center;
 }
 .profile-down-left {
-    width: 30%;
+    width: 100%;
     margin: 2rem;
     /* border: 1px solid red; */
     text-align: center;
@@ -627,6 +627,9 @@ footer .footer-container p {
 }
 
 @media only screen and (max-width: 950px) {
+  .certificate-content h2 {
+    font-size: 1.6rem;
+  }
   .content-text-left h2 {
     font-size: 2.5rem;
   }
@@ -708,6 +711,9 @@ footer .footer-container p {
 }
 
 @media only screen and (max-width: 670px) {
+  .content-text-left,.content-text-right,.content-pic-left,.content-pic-right {
+    padding: 1rem !important;
+  }
   .certificate-item {
     padding: 3rem !important;
   }
@@ -716,6 +722,11 @@ footer .footer-container p {
   .profile-up-right h2 {
     font-size: 4.5rem !important;
   }
+
+  .profile-data{
+    font-size: 1.5rem !important;
+  }
+
   .profile-down-container {
     flex-direction: column !important;
   }
@@ -754,6 +765,9 @@ footer .footer-container p {
   }
 }
 @media only screen and (max-width: 480px) {
+  .profile-up-right h2{
+    font-size: 3.5rem !important;
+  }
   .education-container h1 {
     font-size: 5rem;
   }
@@ -765,5 +779,24 @@ footer .footer-container p {
   }
   .page-container h1 {
     font-size: 5rem;
+  }
+}
+@media only screen and (max-width: 420px) {
+  .certificate-content h2 {
+    font-size: 1.3rem;
+  }
+  .certificate-content {
+    padding: 1rem !important;
+  }
+  .content-text-right h2 {
+    font-size: 2rem;
+  }
+
+  .content-text-right p {
+    font-size: 1.3rem;
+  }
+
+  .content-text-left p{
+    font-size: 1.3rem
   }
 }
