@@ -87,7 +87,7 @@ nav .nav-container {
     align-items: center; }
     nav .nav-container .nav-right #toggle {
       text-decoration: none;
-      color: black;
+      color: #fff;
       transition: .3s;
       border-bottom: 2px solid transparent;
       font-size: 3rem;
@@ -151,6 +151,10 @@ nav .nav-left {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.profile-container .profile-up .profile-up-left .img {
+  width: 75%;
 }
 
 .profile-container .profile-up .profile-up-right{
@@ -232,9 +236,11 @@ nav .nav-left {
 }
 
 .education-content {
-    display: flex;
+    /* display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: center; */
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     /* border: 1px solid red; */
     width: 100%;
     margin-top: 2rem;
@@ -242,11 +248,14 @@ nav .nav-left {
 
 .education-left {
     /* border: 1px solid red; */
-    width: 50%;
-    display: flex;
+    width: 100%;
+    /* display: flex;
     flex-direction: column;
-    text-align: center;
+    text-align: center; */
+    display: grid;
+    grid-template-rows: 4fr 1fr 1fr;
     border-right: 1px solid black;
+    text-align: center;
 }
 
 .education-left p {
@@ -258,17 +267,26 @@ nav .nav-left {
     width: 50%;
     /* border: 1px solid red; */
     margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
 }
 
 .education-left .img img {
     text-align: center;
+    width: 100%;
 }
 
 .education-right {
     /* border: 1px solid red; */
-    width: 50%;
-    display: flex;
+    width: 100%;
+    display: grid;
+    grid-template-rows: 4fr 1fr 1fr;
+    /* display: flex;
     flex-direction: column;
+    text-align: center; */
+    /* height: 100%; */
     text-align: center;
 }
 
@@ -279,16 +297,31 @@ nav .nav-left {
 
 .education-right .img{
     width: 50%;
+    height: 100%;
     /* border: 1px solid red; */
     margin: 0 auto;
+    overflow: hidden;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
 }
 
 .education-right .img img {
     text-align: center;
+    width: 100%;
+    /* height: auto; */
+    /* width: auto; */
 }
 
 .photograph {
   /* position: relative; */
+  background: url(img/ปกphoto.JPG);
+}
+
+.artwork {
+  background: url("img/ปกARTWORK.png");
 }
 .parallax-window {
     background: transparent;
@@ -455,7 +488,7 @@ nav .nav-left {
 }
 
 .certificate-container {
-  padding: 6rem;
+  padding: 4rem;
   display: flex;
   flex-direction: column;
 }
@@ -573,6 +606,10 @@ footer .footer-container p {
     width: 100% !important;
   }
 
+  .certificate-container {
+    padding: 0 !important;
+  }
+
   .certificate-container h1 {
     /* padding: 1rem !important; */
     margin-bottom: 0 !important;
@@ -607,8 +644,126 @@ footer .footer-container p {
   }
 }
 
+@media only screen and (max-width: 720px) {
+  nav .nav-container {
+    height: auto;
+    flex-direction: column; }
+    nav .nav-container .nav-right {
+      flex-direction: column; }
+      nav .nav-container .nav-right #toggle {
+        border-bottom: 0;
+        display: inline-block;
+        font-size: 2rem; }
+        nav .nav-container .nav-right #toggle:hover {
+          color: #fff;
+          border-bottom: 0;
+          padding-bottom: 0; }
+      nav .nav-container .nav-right ul {
+        padding: 1rem;
+        flex-direction: column;
+        line-height: 1.5;
+        display: none; }
+        nav .nav-container .nav-right ul li a {
+          border-bottom: 0px; }
+          nav .nav-container .nav-right ul li a:hover {
+            color: #fff !important;
+            border-bottom: 0px;
+            padding-bottom: 0rem; }
+      nav .nav-container .nav-rught a {
+        display: inline-block !important; }
+    nav .nav-container .nav-left {
+      margin: 1rem 0; }
+}
 @media only screen and (max-width: 670px) {
+  .education-right .img {
+    width: 80%;
+  }
+
+  .education-left .img {
+    width: 80%;
+  }
+
+  .photograph-container {
+    padding: 3rem !important;
+  }
+  .photograph-container,.artwork-container {
+    align-items: center !important;
+  }
+
+  .artwork-container br {
+    display: none;
+  }
+
   .profile-up-left {
     margin: 0;
+  }
+
+  .profile-up-left .img {
+    width: 100% !important;
+  }
+
+  .profile-data {
+    padding: 0 !important;
+  }
+}
+
+@media only screen and (max-width: 670px) {
+  .certificate-item {
+    padding: 3rem !important;
+  }
+}
+@media only screen and (max-width: 580px) {
+  .profile-up-right h2 {
+    font-size: 4.5rem !important;
+  }
+  .profile-down-container {
+    flex-direction: column !important;
+  }
+
+  .profile-down-right {
+    text-align: center;
+  }
+  
+  .profile-down-right p:first-child {
+    margin-top: 0 !important;
+  }
+
+  .profile-down-left {
+    margin: 0 auto !important;
+    padding: 1rem 0;
+  }
+
+  .education-content {
+    grid-template-columns: 1fr;
+  }
+
+  .education-left {
+    grid-template-rows: 8fr 1fr 1fr;
+    border-right: none !important;
+  }
+  .education-right{
+    margin-top: 1rem;
+    grid-template-rows: 8fr 1fr 1fr;
+  }
+
+  .education-left .img {
+    width: 70%;
+  }
+  .education-right .img {
+    width: 70%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .education-container h1 {
+    font-size: 5rem;
+  }
+  .photograph-container h1 {
+    font-size: 5rem;
+  }
+  .artwork-container h1 {
+    font-size: 5rem;
+  }
+  .page-container h1 {
+    font-size: 5rem;
   }
 }

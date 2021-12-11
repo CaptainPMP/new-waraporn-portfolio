@@ -9,8 +9,10 @@
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- <link href="https://fonts.googleapis.com/css2?family=Kanit&display=swap" rel="stylesheet"> -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-    <script src="parallax.min.js"></script>
+    <script rel="preload" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script rel="preload" src="parallax.min.js"></script>
+    <!-- <link rel="preload" href="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js" as="script">
+    <link rel="preload" href="parallax.min.js" as="script"> -->
 </head>
 <body>
     <nav>
@@ -109,7 +111,7 @@
         </div>
     </section>
 
-    <section class="artwork parallax-window" id="artwork parallax" data-parallax="scroll" data-image-src="img/ปกART WORK.png" data-z-index='1'>
+    <section class="artwork parallax-window" id="artwork parallax" data-parallax="scroll" data-image-src="img/ปกARTWORK.png" data-z-index='1'>
         <div class="artwork-container">
             <h1>Art<br>work</h1>
             <a href="#" class='btn-purp'>Click Here</a>
@@ -289,10 +291,16 @@
         </div>
     </footer>
 
-    <script>
+    <!-- <script>
         var parallax = new Parallax('.parallax-window');
         parallax.init();
+    </script> -->
+    <script>
+        $(document).ready(function(){
+            $("#toggle").click(function(){
+                $("#myTopNav").slideToggle("slow");
+            });
+        });
     </script>
-    
 </body>
 </html>
